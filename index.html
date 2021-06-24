@@ -29,9 +29,9 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<img src="./images/i1.png" alt="image here" style="height: 350px; width: 500px ;margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					
 					</a>
-					<h3 strong style="color:gold"><u>MAX FLOW MIN CUT ALGORITHM</u></h3>
+					<h3 strong style="color:gold"><u>SMART SALINE MONITIORING SYSTEM</u></h3>
 				</section>
 
 				<section>
@@ -40,13 +40,15 @@
 						<large>Prsented by </large>
 						<br>
 						<br>
-						<small strong style="color:gold">Akshay Revakar</small>  &nbsp;   <small>2SD18CS010</small>
-						<br>
-						<small strong style="color:gold">Anuragh Shahi</small>    &nbsp;    <small>2SD18CS018</small>
-						<br>
+						
 						<small strong style="color:gold">kishan Rayanal</small>   &nbsp;    <small>2SD18CS047</small>
 						<br>
 						<small strong style="color:gold">Pruthviraj Horadi</small>  &nbsp;  <small>2SD18CS131</small>
+						<br>
+						<br>
+						<small >Under the guidance of</small>
+						<br>
+						<small strong style="color:gold">Prof. Nita Kakhandaki   </small>  
 					</p>
 				</section>
 
@@ -57,27 +59,23 @@
 						<br>
 					</section>
 					<section>
-						<small >Flow Networks</small>
+						<small >what is Arduino?</small>
 						<br>
-						<small>Flow </small>
+						<small>About Arduino UNO </small>
 						<br>
-						<small>Define A Max Flow Problem</small>
+						<small>what is smart saline monitioring system?</small>
 						<br>
-						<small>Anti Parallel Edge</small>
+						<small>Driving of this Project!!</small>
 						<br>
-						<small>Multiple Source And Sink</small>
+						<small>Parts Used</small>
 						<br>
-						<small>Residual Networks</small>
+						<small>Connectivity </small>
 						<br>
-						<small>Augmenting Paths</small>
+						<small>Flowchart with pseudo code</small>
 						<br>
-						<small>Ford Fulkerson Algorithm</small>
+						<small>Conclusion</small>
 						<br>
-						<small>Cuts</small>
-						<br>
-						<small>Max Flow Min Cut Theorem</small>
-						<br>
-						<small>Analysis of Ford Fulkerson Algorithm</small>
+						
 
 					</section>
 					
@@ -85,574 +83,148 @@
 
 				<section>
 					<section>
-						<h4 strong style="color:orange"><u>Flow Networks</u></h4>
+						<h4 strong style="color:orange"><u>What is Arduino?</u></h4>
 						<p>
-							Definition: A flow network G = (V, E) is a directed graph in which each edge (u, v) ∈ E has a nonnegative Capacity c (u, v)>=0. Where V= Vertices, E=Edges, u, v=any two vertices in set V.
+							It’s a microcontroller board which contains power supply, USB port and Atmel microcontroller chip.
 						</p>
-						
-						<img src="images/p1.jpg" alt="put image here"width="600" height="350" >
 					</section>
 					<section>
-						<h5 strong style="color:orange"><u>Flow</u></h5>
-						<small> Let s be the source of the network, and let t be the sink. A flow in G is a real-valued function f: V x V→R such that the following properties hold:
-						</small>
+						<h3 strong style="color:orange"><u>Types of Arduino...</u></h3>
+						<h5>Arduino UNO</h5>
 						<br>
+						<h5>Arduino MEGA</h5>
 						<br>
-						<small strong style="color:gold">Capacity Constraint: </small>
-							<small>For all u, v ∈ V, we need f (u, v) ≤ c (u, v).</small>
+						<h5>Arduino NANO</h5>
+						<br>
+						<h5>Arduino MINI</h5>
+						<br>
 						
-						<br>
-						<br>
-						<small strong style="color:gold">
-							Skew Symmetry:</small>
-							<small>For all u, v ∈ V, we need f (u, v) = - f (u, v).
-							Ex->f(s,a)=8 , f(a,s)=-8</small>
-	
-						
-						<br>
-						<br>
-						<small strong style="color:gold">
-							Flow Conservation:</small>
-							<small> For all u ∈ V-{s, t}, we need</small>
-							
-						
-						<br>
-						<img src="images/p2.png" alt="put image here"width="300" height="110" >
-						<br>
 						
 					</section>
-					<section>
-						<img src="images/Screenshot (144).png" alt="put image here"width="700" height="450" >
-					</section>
-					<section>
-						<P strong style="color:gold"><u>Condition for a flow network</u></P>
-						<br>
-						<small>1> If E contains an edge (u, v) then there is no edge (v, u) in the reverse direction</small>
-						<br>
-						<small>2> Self loop are not allowed.
-						</small>
-						<br>
-						<small>3> Anti parallel edges are not allowed. If there is a edge (v1, v2) ∈ E then (v2, v1) ∉ E
-						</small>
-						<br>
-						<small>4> If (u, v) ∉ E, then we define c (u, v)=0.
-						</small>
-						<br>
-						<small>5> We distinguish two vertices in a flow network: a source s and a sink t . 
-						</small>
-						<br>
-						<small>6> The source produces the material at same steady rate, and the sink consumes the material at the same rate
-						</small>
 					
-					</section>
-					<section>
-						<p strong style="color:gold">Maximum Flow:</p> <p>A maximal flow is a flow with the maximal possible value.
-						</p> 
-						<br>
-						<p strong style="color:orangered"><u>Practical Examples of a Network</u></p>
-						<br>
-						<small>a) liquids flowing through pipes
-						</small>
-						<br>
-						<small>b) parts through assembly lines
-						</small>
-						<br>
-						<small>c) current through electrical network</small>
-						<br>
-						<small>d) information through communication network
-						</small>
-						<br>
-						<small>e) goods transported on the road…</small>
-						<br>
-					</section>
+					
 
 				</section>
 
 				<section >
 					<section>
-						<h2 strong style="color:gold">Anti - Parallel  Edge</h2>
-						<p>What to do when a flow network has Anti - parallel  edge?</p>
+						<h2 strong style="color:gold">About Arduino UNO</h2>
+						<small>The Arduino Uno is an open-source microcontroller board based on the Microchip ATmega328P microcontroller and developed by Arduino.cc. ... The board has 14 digital I/O pins (six capable of PWM output), 6 analog I/O pins, and is programmable with the Arduino IDE (Integrated Development Environment), via a type B USB cable.</small>
 					</section>
 
 					<section>
-						<p>If we wish to solve a flow problem with anti parallel edges, we must transform the network into an equivalent one containing no anti parallel edges.
-						</p>
+						<img src="images/1.jpg" alt="put image here"width="700" height="400" >
 						<br>
-						<p>Anti parallel edges violate the conduction of flow network, i.e. If there is a edge (v1, v2) ∈ E then (v2, v1) ∉ E
-						</p>
-						<br>
-					</section>
-
-					<section>
-						<p>We call the two edges (v1, v2) and (v2, v1) anti parallel.
-						</p>
-						<br>
-					
-						<img src="images/p4.jpg" alt="put image here"width="700" height="400" >
-						<br>
-						<p>Figure b displays the equivalent network
-						</p>
-					
-
-					</section>
-
-					<section>
-						<p strong style="color:orangered"><u>Procedure to obtain equivalent network</u></p>
-						<br>
-						<small>1) We choose one of the two anti parallel edges, in this case (v1, v2) , and split it by adding a new vertex v’  and replace edge (v1, v2) with the pair of edges (v1, v’)  and (v’, v2). 
-						</small>
-						<br>
-						<br>
-						<small>2) We set the capacity of both new edges to the capacity of the original edge</small>
-						<br>
-						<br>
-						<small>3) Now the resulting network does not violate the conduction  
-						</small>
-						<br>
-						<br>
-						<small>4) By doing this we can solve real word problems with anti parallel edges easily.
-						</small>
-						<br>
-
-					</section>
-					
+					</section>				
 				</section>
 
 				<section>
 					<section>
-						<h2 strong style="color:gold"><u>Flow Network With Multiple Sources and Sink</u>
+						<h2 strong style="color:gold"><u>what is smart saline monitioring system?</u>
 						</h2>
 						<br>
-						<p>What to do when a flow network has Multiple sources and sink?</p>
+						
 					</section>
 
-					<section>
-						<p>A maximum-flow problem may have several sources and sinks, rather than just one of each.
-						</p>
-						<br>
-						<p>We can reduce the problem of determining a maximum flow in a network with multiple sources and multiple sinks to an ordinary maximum-flow problem.
-						</p>
-						<br>
-					</section>
-
-					<section>
-						<img src="images/p5.jpg" alt="put image here"width="700" height="400" >
-						<br>
-						<p>(b) Shows the ordinary flow network with only a single source and a single sink. Which is equivalent to (a) 
-
-						</p>
-					</section>
-
-					<section>
-						<p strong style="color:orangered"><u>Procedure to obtain ordinary flow network</u></p>
-						<br>
-						<small>1) We add a super source ‘s’ and add a directed edge (s, si) with capacity c(s, si) = ∞ for each  i = 1,2,…,m.</small>
-						<br>
-						<br>
-						<small>2) We also create a new super sink ‘t’ and add a directed edge (ti, t) with capacity c (ti, t) = ∞ for each i = 1,2,…,n.
-						</small>
-						<br>
-						<br>
-						<small>3) Any flow in network (a) corresponds to a flow in network (b), and vice versa. 
-						</small>
-						<br>
-						<br>
-						<small>4) The single source ‘s’ simply provides as much flow as desired from the multiple sources ‘si’ , and the single sink ‘t’ likewise consumes as much flow as desired from the multiple sinks ‘ti’
-						</small>
-						<br>
-					</section>
-					
-					
 				</section>
 
 				<section>
 					<section>
-						<h2 strong style="color:gold"><u>Ford Fulkerson algorithm</u>
+						<h2 strong style="color:gold"><u>Driving of this Project!</u>
 						</h2>
 						<br>
-						<p>a) Residual network</p>
-						<br>
-						<p>b) Augmenting Paths</p>
-						<br>
-						<p>c) Ford fulkerson algorithm to find the maximum value</p>
-						<br>
-					</section>
-
-					<section>
-						<p strong style="color:orangered"><u>Residual network</u></p>
-						<br>
-						<br>
-						<small>A Residual Network is a network of edges with residual  capacities.
-						</small>
-						<br><br>
-						<small>It is represented as Gf = (V,Ef)
-						</small>
-						<br><br>
-						<small>Ef = {(u,v) Î V ´ V : cf(u,v) > 0}
-						</small>
+						<p strong style="color:orange">how much is it important to doctors and nurses?</p>
 						<br>
 						
-
+					</section>
+					<section>
+						<p>The device aims to fully automatic the process with requirement of almost no supervision externally. This helps to get rid of human errors and also provides a very reliable and highly efficient industry ready device. </p>
 					</section>
 
-					<section>
-						<p strong style="color:yellowgreen"><u>What is Residual Capacity then?</u></p>
-						<br>
-						<br>
-						<img src="images/ADSA_rn3.jpg" alt="image here" width="500" height="250">
-						<small>It is  the remainder of the original capacity and the flow in the Network.
-						</small>
-						<br>
-						
 					
-						<small>cf(u,v) = c(u,v) – f(u,v)
-						</small>
-						<br>
-					</section>
-						<section>
-						<small>The residual network and the original network 
-							have the same set of variables.
-						The residual network may contain some edges that 
-							did not exist in the Flow Network.
-						</small>
-						<br>
-						<br>
-						<small> 
-							cf(u,v) > 0
-							  The capacity of the Residual network should be 
-							  greater than 0,to find the maximum flow.
-						   </small>
-						</section>
-						   
-						
-						<section>
-							<p strong style="color:rosybrown"><u>Simple example for Residual Graph	</u></p>
-							<br>
-							<img src="images/ADSA_rn1.jpeg" alt="image here" width="500" height="250">
-							<br>
-							<br>
-							<h4>s->u->v->t</h4>
-							<br>
-					    </section>
-
-						<section>
-							<p><u>So , what does the forward and backward arrows indicate?	</u></p>
-							<br>
-							<p strong style="color:yellowgreen"><u>How is the residual graph useful?</u></p>
-							<img src="images/ADSA_rn2.jpeg" alt="image here" width="500" height="250">
-						</section>
 					
 				</section>
 
 				<section>
 					<section>
-						<h2><u>Augmenting Path</u>
-						</h2>
-						<small>An Augmenting path is a simple path from the source
-							to the destination.
-						 Simple in the sense,  that there should be no cycles.							 
-						</small>
-						<br>
-						<br>
-						<h5 style="color:gold">What is the basic algorithm for finding the augmenting path?</h5>
-						<br>
-						<small>Augmenting_path(G = (V, E, c))</small>
-						<br>
-						<small> 1: Initialize f (e) ← 0 for all edges</small>
-						<br>
-						<small> 2: while ∃ augmenting path p in Gf do</small>
-						<br>
-						<small> 3: augment as much flow along p as possible.</small>
-						<br>
-
-					</section>
-					<section>
-						<p strong style="color:rosybrown"><u>A example for understanding Augmenting path</u></p>
-						<img src="images/ADSA_augment1.jpeg" alt="image here" width="500" height="250">
-
+						<h2><u>Parts used in the Project </u></h2>
 					</section>
 
 					<section>
-						<img src="images/ADSA_aug2.jpeg" alt="image here" width="500" height="250">
+						<p strong style="color:orange">Arduino UNO</p>
+						<img src="images/1.jpg" alt="put image here"width="700" height="400" >
+					</section>
+					<section>
+						<p strong style="color:orange">Load cell</p>
+						<img src="images/2.jpg" alt="put image here"width="700" height="400" >
+					</section>
+					<section>
+						<p strong style="color:orange">HX711</p>
+						<img src="images/3.jpg" alt="put image here"width="700" height="400" >
+					</section>
+					<section>
+						<p strong style="color:orange">LCD Display</p>
+						<img src="images/4.jpg" alt="put image here"width="700" height="400" >
 						<br>
-						<br>
-						<h4>s->c->a->b->d</h4>
-						<br>
+						
+					</section>
+					<section>
+						<p strong style="color:orange">Buzzer</p>
+						<img src="images/5.jpg" alt="put image here"width="700" height="400" >
 					</section>
 
-					<section>
-						<img src="images/ADSA_aug3.jpeg" alt="image here" width="500" height="250">
-						<br>
-						<br>
-						<h4>Flow=5</h4>
-						<br>
-						<h4>s->c->a->b->t</h4>
-						<br>
-					</section>
-					<section>
-						<img src="images/pp1-.png" alt="image here" width="800" height="550">
-						<br>
-					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2 strong style="color:goldenrod"><u>Ford Fulkerson Algorithm To Find The Maximum Flow Value</u>
-						</h2>
+					<h2 strong style="color:goldenrod"><u>Connectivity</u></h2>
+					<img src="images/7.jpeg" alt="put image here"width="700" height="400" >
+					</section>
+					<section>
+						<img src="images/9.jpeg" alt="put image here"width="700" height="400" >
+					</section>
+					<section>
+						<img src="images/10.jpeg" alt="put image here"width="700" height="400" >
 					</section>
 
-					<section>
-						<p>a) Ford Fulkerson algorithm helps in finding the max flow of the graph</p>
-						<br>
-						<br>
-						<p>b) In the Ford-Fulkerson method, we repeatedly find the <u>augmenting path</u> through the <u>residual graph</u> and <u>augment the flow </u>until no more augmenting paths can be found.
-						</p>
-					</section>
-
-					<section>
-						<h5><u>The Ford-Fulkerson Algorithm</u></h5>
-						<br>
-						<br>
-						<small><i><strong style="color:gold"> Ford Fulkerson</i></strong> (G,s,t)</small>
-						<br>
-						<small>1 &nbsp <i><strong style="color:gold"> for </strong></i>each edge (u,v) in G.E <i><strong style="color:gold">do</strong></i></small>
-						<br>
-						<small>2 &nbsp f(u,v)<-f(v,u)<- 0 </small>
-						<br>
-						<small>3 &nbsp <i><strong style="color:gold">while</strong></i> there exists a path p from s to t in residual network Gf<i><strong style="color:gold"> do</strong></i></small>
-						<br>
-						<small>4 &nbsp cf= min{ cf(u,v): (u,v) is in p }</small>
-						<br>
-						<small>5 &nbsp <i><i><strong style="color:gold">for</strong></i> each edge (u,v) in p <i></i><strong style="color:gold">do</strong></i></small>
-						<br>
-						<small>6 &nbsp  f(u,v)<- f(u,v) + cf</small>
-						<br>
-						<small>7 &nbsp f(u,v)<- -f(u,v) </small>
-						<br>
-						<small>8 &nbsp <i><strong style="color:gold">return</strong></i> f</small>
-						<br>
-					</section>
-
-					<section>
-						<p strong style="color:rosybrown"><u>Lets take a example and find out the maximum flow 
-							using Ford-Fulkerson method</u></p>
-						<br>
-						<img src="images/ff_1.jpeg" alt="image here" width="500" height="250">
-						<br>
-						<small>Here for the given example</small>
-						<br>
-						<small>a-> Source</small>
-						<br>
-						<small>z-> Sink</small>
-						<br>
-					</section>
-
-					<section>
-						<p>step 1: Flow=0</p>
-						<br>
-						<img src="images/ff_2.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 2:a->c->e->z </p>
-						<br>
-						<p>Flow=5</p>
-						<img src="images/ff_3.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 3:We again update the Flow 
-							Diagram after augmenting the 
-							Residual capacity of 5. 
-						 </p>
-						
-						
-						<img src="images/aa1.jpeg" alt="image here" width="500" height="250">
-						<img src="images/ff12.jpeg" alt="image here" width="500" height="200">
-						<br>
-					</section>
-
-					<section>
-						<p>step 4:a->b->d->z </p>
-						<br>
-						<p>Flow=5+4=9</p>
-						<img src="images/ff_4.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 5:we will draw the residual graph </p>
-						<br>
-						
-						<img src="images/ff_5.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 6:a->c->z </p>
-						<br>
-						<p>Flow=9+3=12</p>
-						<img src="images/ff_6.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 7:we will draw the 
-							blocked Residual graph</p>
-						<br>
-						
-						<img src="images/ff_7.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 8:a->b->e->z </p>
-						<br>
-						<p>Flow=12+1=13</p>
-						<img src="images/ff_8.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 9:Now lets draw another 
-							blocked residual graph from 
-							the source to the sink
-						 </p>
-						<br>
-						
-						<img src="images/ff_9.jpeg" alt="image here" width="500" height="250">
-						<br>
-					</section>
-
-					<section>
-						<p>step 10:Now lets draw a residual
-							graph to cross verify the flow from 
-							the sink to the source.
-						 
-						 </p>
-						<br>
-						
-						<img src="images/ff_11.jpeg" alt="image here" width="500" height="250">
-						<br>
-						
-						<h5>AFTER CROSS VERIFYING , AS THERE ARE NO MORE PATH FROM THE 
-							SOURCE TO THE SINK,
-							THE MAXIMUM FLOW WILL BE 13
-							 FLOW = 13.
-						  
-						 </h5>
-					</section>
+					
 				</section>
 
 				<section>
-					<p><strong style="color:gold">Problems That might arise while using Ford – Fulkerson  
-						Max-Flow Algorithm</strong></p>
-						<br>
-						<br>
-						<p>a) &nbsp  The ford Fulkerson algorithm might go into a 
-							infinite loop when we are using Irrational 
-							numbers.
-						</p>
-						<br>
-						<br> 
-						<p>b) &nbsp How do we know when the algorithm terminates
-							and we actually have the maximum flow ?
-					  </p>
-				</section>
-
-				<section>
-					<h5 strong style="color:goldenrod">what are cuts?</h5>
+					<section>
+					<h4><u><strong style="color:gold">Flowchart </strong></u></h4>
 					<br>
-					<img src="images/1.png" alt="image here" width="500" height="250">
+					<img src="images/8.png" alt="put image here"width="700" height="500" >	
+					</section>
+					<section>
+						<h4><u><strong style="color:gold"> pseudo code</strong></u></h4>
+						<br>
+						<img src="images/11.png" alt="put image here"width="700" height="500" >		
+					</section>
+						
+					
+				</section>
+				<section>
+					<h4><u><strong style="color:gold">Conclusion</strong></u></h4>
 					<br>
-					<p>A cut is a node partition (S, T) such that s is in S and t is in T.  capacity(S, T) = sum of weights of edges leaving S.
-					</p>
-				</section>
-
-				<section>
-					<section>
-
-					    <h5 strong style="color:skyblue">Lets us consider an Analogy</h5>
-					    <br>
-					    <img src="images/2.png" alt="image here" width="700" height="350">
-					</section>
-					<section>
-						<img src="images/3.png" alt="image here" width="700" height="350">
-					</section>
-					<section>
-						<img src="images/4.png" alt="image here" width="700" height="350">
-					</section>
-					<section>
-						<img src="images/5.png" alt="image here" width="700" height="350">
-					</section>
-
-				</section>
-
-				<section>
-					<h4 strong style="color:gold"><u>Max Flow Min Cut Theorem</u></h4>
+					<p>It will save the life of
+						the patients. This will reduce the stress in continual monitoring by the doctor or nurse at an affordable cost</p>
 					<br>
-					<p>If f is a flow in a flow network G with Source S and Sink T, then the following are equivalent
-					</p>
 					
-					<p>1) &nbsp F is a max flow in G
-					</p>
-					
-					<p>2) &nbsp The residual network Gf contains no augmenting Path
-					</p>
-					
-					<p>3) &nbsp |f|=C(S,T) for same cut (There exists a cut whose capacity equals the value of f)
-					</p>
-					
-					<p> &nbsp  1=>2=>3=>4
-					</p>
+					<p>saline level monitoring system provides more flexibility to doctors, thereby the patients caring is enhanced.
+						Hence it saves lots of time for doctor or nurse who is on duty</p>
+					<br>
+					<small></small>
+					<br>
+					<small></small>
+					<br>
+					<small></small>
+					<br>
+					<small></small>
+					<br>
 				</section>
 
-				<Section>
-					<section>
-						<h5 strong style="color:rosybrown">Lets consider an example</h5>
-						<br>
-						<img src="images/ss0.png" alt="image here" width="700" height="350">
-					</section>
-					<section>
-						<img src="images/ss1.png" alt="image here" width="700" height="350">
-					</section>
-					
-					<section>
-						<img src="images/ss3.png" alt="image here" width="700" height="350">
-					</section>
-					<section>
-						<img src="images/ss5.png" alt="image here" width="700" height="350">
-					</section>
-					
-					<section>
-						<img src="images/ss.png" alt="image here" width="700" height="350">
-						<br>
-						<small>The minimum cut that can occur is 13 which is the maximum flow</small>
-					</section>
-					
-				</Section>
-				<section>
-					<section>
-						<h5 strong style="color:gold">Analysis of Ford-Fulkerson</h5>
-						<br>
-						<small>The while loop of line 3-8 will execute at most | f | times, since the flow value increases by at least one unit in each iteration.
-						</small>
-						<br>
-						<br>
-						<small>The time to find path in residual network at line 3 is O(E)  if we use either depth-first search or breadth-first search</small>
-						<br>
-						<br>
-						<small>Each iteration of while loop takes O(E)  times, making the total running time of FORD-FULKERSON algorithm O(E|f|).
-						</small>
-						<br>
-
-					</section>
-					<section>
-						<img src="images/96.jpg" alt="put image here"width="700" height="400" >
-					</section>
-				</section>
+				
 				
 				<section>
 					<h4 strong style="color:gold"><u>Thank YOU</u></h4>
